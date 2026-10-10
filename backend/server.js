@@ -20,7 +20,7 @@ const loginRoute=require('./Routes/loginRoute');
 const signupRoute=require('./Routes/signupRoute');
 const messageRoute=require('./Routes/messageRoute');
 const usersRoute=require('./Routes/usersRoute');
-
+const groupRoutes = require("./Routes/groupRoutes");
 
 require('./models/Users');
 app.use(express.json());
@@ -28,6 +28,8 @@ app.use('/api',signupRoute);
 app.use('/api',loginRoute);
 app.use('/api',messageRoute);
 app.use('/users',usersRoute);
+app.use("/group", groupRoutes);
+app.use("/api/groups", groupRoutes);
 
 // ==============================
 // Socket.io Server
@@ -37,24 +39,9 @@ const server = http.createServer(app);
 
 socketIo(server);
 
-// io.on("connection", (socket) => {
-//     console.log("New Socket.io connection",socket.id);
-
-//     socket.on("register",(userId)=>{
-//         socket.join(`user_${userId}`);
-//         console.log(
-//             `User ${userId} joined room user_${userId}`
-//         );
-//     });
 
 
-// socket.on("disconnect",()=>{
-//     console.log("Socket disconnected",socket.id);
-// })
-
-// });
-
-
+require('./models/index');
 db.sync({alter:true}).then(()=>{
     const port = 3000;
 

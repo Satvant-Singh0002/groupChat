@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Group</title>
+    <link rel="stylesheet"href="creategroup.css">
+</head>
+<body>
+
+    <div class="group-container">
+        <div class="header">
+            <h2>Select Users</h2>
+            <button id="nextBtn">→</button>
+
+        </div>
+        <div id="userList"></div>
+
+    </div>
+
+    <!-- Group Name Screen -->
+    <div class="group-name-container" id="groupNameContainer">
+
+        <div class="header">
+            <h2>Enter Group Name</h2>
+        </div>
+
+        <input
+            type="text"
+            id="groupName"
+            placeholder="Enter group name"
+        >
+
+        <button id="createGroupBtn">Create Group</button>
+
+    </div>
+
+     <script src="
+https://cdn.jsdelivr.net/npm/axios@1.18.0/dist/axios.min.js
+"></script>
+    <script src="creategroup.js"></script>
+</body>
+</html>

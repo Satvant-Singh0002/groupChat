@@ -25,12 +25,35 @@ body {
 }
 
 /* Header */
-.users-container h2 {
+.header {
     background: #075e54;
+    position: relative;
     color: white;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Select User heading */
+.header h2 {
     font-size: 22px;
     font-weight: 500;
+}
+
+/* Three-dot menu button */
+.menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 5px;
+}
+
+.menu-btn:hover {
+    opacity: 0.8;
 }
 
 /* User list */
@@ -110,7 +133,40 @@ body {
         box-shadow: none;
     }
 
-    .users-container h2 {
+    .header {
         padding: 18px;
     }
+
+    .header h2 {
+        font-size: 22px;
+    }
+
+    .menu-btn {
+        font-size: 28px;
+    }
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background: white;
+    width: 180px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.menu.show {
+    display: block;
+}
+
+.menu div {
+    padding: 12px;
+    cursor: pointer;
+    color: black;
+}
+
+.menu div:hover {
+    background: #f0f0f0;
 }

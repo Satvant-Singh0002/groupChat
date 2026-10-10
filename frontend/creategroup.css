@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #d9dbd5;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.group-container {
+    width: 400px;
+    height: 600px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+
+.header {
+    height: 60px;
+    background: #075e54;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 18px;
+
+    color: white;
+}
+
+.header h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#nextBtn {
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: white;
+    color: #075e54;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nextBtn:hover {
+    background: #eeeeee;
+}
+
+/* User List */
+
+#userList {
+    padding: 10px 0;
+    height: calc(100% - 60px);
+    overflow-y: auto;
+}
+
+/* User */
+
+.user-item {
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 20px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    cursor: pointer;
+}
+
+.user-item:hover {
+    background: #f5f5f5;
+}
+
+.user-item span {
+    font-size: 17px;
+    color: #222;
+}
+
+/* Checkbox */
+
+.user-checkbox {
+    width: 20px;
+    height: 20px;
+
+    cursor: pointer;
+
+    accent-color: #075e54;
+}
+#groupNameContainer {
+    display: none;
+}
